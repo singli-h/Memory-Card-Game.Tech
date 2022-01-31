@@ -1,7 +1,7 @@
 class AudioController {
     constructor() {
         this.background = new Audio('Music/Technologic.mp3');
-        this.background.volume = 0.2;
+        this.background.volume = 0.15;
         this.background.loop = true;
         this.flip_s = new Audio('Music/flip.mp3');
         this.match_s = new Audio('Music/match.mp3');
