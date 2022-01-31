@@ -161,7 +161,7 @@ class Matching {
     }
     //shuffle card!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     shuffle() {
-        //Fisher-Yates shuffle-> create j: a random integer such that 0 ¡Ü j ¡Ü i
+        //Fisher-Yates shuffle-> create j: a random integer such that 0 Â¡Ãœ j Â¡Ãœ i
         for (let i = this.cardsArray.length - 1; i > 0; i--) {
             let rand = Math.floor(Math.random()*(i+1));
         //Then exchange a[j] and a[i]
