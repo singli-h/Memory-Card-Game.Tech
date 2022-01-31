@@ -50,7 +50,7 @@ html {
 }
 
 @keyframes pop {
-    from {
+    from { 
         background-color:rgba(0,0,0,0); /*transparent*/
         font-size:0;
     }
