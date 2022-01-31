@@ -1,0 +1,218 @@
+﻿@font-face {
+
+    font-family: title_f;
+    src: url("Fonts/AdventPro-Bold.woff") format('woff'),url("Fonts/AdventPro-Thin.ttf") format('woff');
+        }
+html {
+    min-height:100vh;
+    cursor: url("Skins/cursor.cur") ,auto;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.title {
+    color:#d3fffe;
+    font-family: title_f,serif;
+    font-weight: normal;
+    text-align:center;
+    font-size: 60px;
+
+}
+.overlay-text {
+    position:fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    justify-content:center;
+    align-items:center;
+    z-index:100;
+    color:aqua;
+    font-family:title_f,serif;
+    display:none;
+
+}
+
+.overlay-text.visible{
+    display:flex;
+    animation:pop 500ms forwards;
+    flex-direction:column;
+}
+.overlay-text-restart {
+    font-size: .5em;
+
+}
+.overlay-text-result {
+    font-size: .5em;
+
+}
+
+@keyframes pop {
+    from {
+        background-color:rgba(0,0,0,0); /*transparent*/
+        font-size:0;
+    }
+    to {
+    background-color:rgba(0,0,0,0.7);
+        font-size:100px;
+    }
+}
+
+.info_container {
+    grid-column: 1/-1; /*TAKES THE FIRST ROW*/
+    display: flex;
+    
+    justify-content: space-around;
+
+}
+.play_info {
+    font-family: title_f,serif;
+    font-size: 25px;
+    color:aqua;
+}
+body
+{
+    margin: 0;
+    background: url("Skins/Wall.jpg");
+    /*background: linear-gradient(#0F8EEC, #03235B);*/
+}
+
+
+.game_body {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-gap:10px;
+    margin:10px;
+    justify-content: center;
+    perspective: 500px;
+}
+
+.card {
+
+    height: 160px;
+    width: 120px;
+    position:relative;
+
+
+}
+
+.card:hover {
+    cursor: url("Skins/cursor_1.cur") ,auto;    
+    
+}
+.card_display {
+ 
+    position:absolute;
+    width:100%;
+    height:100%;
+    align-items:center;
+    justify-content: center;
+    display:flex;
+    overflow:hidden;
+    backface-visibility:hidden;
+    border-width:2.5px;
+    border-style:solid;
+    transition: transform 400ms ease-in-out;
+}
+
+.card.visible .card_back {
+
+    transform: rotateY(-180deg);
+
+}
+
+.card.visible .card_front {
+
+    transform: rotateY(0);
+
+}
+
+.card.matched .card_front .card_value {
+    animation: move 1.5s linear infinite 500ms;
+}
+@keyframes move {
+    0%,100% {
+    transform: rotate(0) scale(1.5);
+    }
+
+    50% {
+    transform:rotate(200deg) scale(1.7);
+    }
+
+}
+
+.card_front {
+   transform: rotateY(180deg);
+   border-color:aqua;
+   border-width:2.5px;
+   background:url("Skins/background.png");
+}
+
+.card_front:hover .card_value {
+    transform:scale(1.7); 
+    -webkit-transition: -webkit-transform .1s ease-in-out;
+    transition:transform .1s ease-in-out;   
+}
+.card_value {
+
+    transform:scale(1.5);
+}
+
+.card_back {
+    background-color:#CD0509;
+    border-color:aqua;
+    transform: rotateY(0); 
+
+}
+.card_back:hover .circle{
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+}
+.card_display:hover .corner {
+    width:55px;
+    height:55px;
+}
+.corner {
+    position:absolute;
+    width:50px;
+    height:50px;
+    transition: width 100ms ease-in-out, height 100ms ease-in-out;
+    -webkit-transition: width 100ms ease-in-out, height 100ms ease-in-out;
+}
+.corner_1 {
+    top:0;
+    left:0;
+    transform:rotate(180deg);
+}
+
+.corner_2 {
+    bottom:0;
+    right:0;
+}
+
+
+
+.circle {
+    position:absolute;
+    bottom:50px;
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+   -webkit-transition: -webkit-transform .8s ease-in-out;
+          transition:         transform .8s ease-in-out;
+}
+
+@media(max-width:600px) {
+    .game_body {
+        grid-template-columns: repeat(2,auto);
+    
+    }
+
+    .info_container {
+    flex-direction:column;
+    align-items:center;
+    }
+
+}

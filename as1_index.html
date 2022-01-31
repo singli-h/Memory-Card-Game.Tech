@@ -1,0 +1,270 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment1_54805981_LiSing</title>
+    <link rel="stylesheet" type="text/css" href="as1_StyleSheet.css" />
+    <script src="as1_script.js" async></script>
+</head>
+<body>
+    <h1 class="title">Card💳Matching .TECH Ver</h1>
+    <div class="overlay-text visible">
+        Click to Start
+    </div>
+    <div id="game_over" class="overlay-text">
+        Game Over
+        <span class="overlay-text-result">Average flips per paired:</span>
+        <span id="overlay-text-mark">0.0</span>
+        <span class="overlay-text-restart">Click to Restart</span>
+    </div>
+    <div id="game_win" class="overlay-text">
+        VICTORY
+        <span class="overlay-text-result">Average flips per paired:</span>
+        <span id="overlay-text-mark1">0.0</span>
+        <span class="overlay-text-restart">Click to Restart</span>
+    </div>
+    <div class="game_body">
+        <div class="info_container">
+            <div class="play_info">
+                Time: <span id="time">100</span>s remaining
+            </div>
+            <div class="play_info">
+                Flips: <span id="flips">0</span>
+            </div>
+            <div class="play_info">
+                Paired: <span id="paired">0</span>/8
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/hdd.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/hdd.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/cpu.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/cpu.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/hex.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/hex.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/monitor.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/monitor.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/phone.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/phone.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/robot.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/robot.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/star.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/star.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/web.png" />
+            </div>
+
+        </div>
+
+        <div class="card">
+            <div class="card_back card_display">
+                <img class="corner corner_1" src="Skins/corner.png" />
+                <img class="corner corner_2" src="Skins/corner.png" />
+                <img class="circle" src="Skins/circle.png" />
+            </div>
+            <div class="card_front card_display">
+                <img class="corner corner_1" src="Skins/corner_1.png" />
+                <img class="corner corner_2" src="Skins/corner_1.png" />
+                <img class="card_value" src="Skins/web.png" />
+            </div>
+
+        </div>
+
+
+
+
+
+    </div>
+</body>
+</html>
